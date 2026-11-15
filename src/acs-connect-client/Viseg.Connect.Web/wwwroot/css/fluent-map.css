@@ -1,0 +1,23 @@
+/* Fluent initializes inline tokens. These semantic mappings deliberately take precedence. */
+body[data-viseg-theme] {
+  --colorNeutralBackground1: var(--surface-panel) !important;
+  --colorNeutralBackground2: var(--surface-sidebar) !important;
+  --colorNeutralBackground3: var(--surface-hover) !important;
+  --colorNeutralBackground1Hover: var(--surface-hover) !important;
+  --colorNeutralForeground1: var(--text-primary) !important;
+  --colorNeutralForeground2: var(--text-secondary) !important;
+  --colorNeutralForeground3: var(--text-secondary) !important;
+  --colorNeutralStroke1: var(--border-default) !important;
+  --colorNeutralStroke2: var(--border-default) !important;
+  --colorBrandBackground: var(--accent-primary) !important;
+  --colorBrandBackgroundHover: var(--accent-primary-hover) !important;
+  --colorBrandForeground1: var(--accent-primary) !important;
+  --colorBrandForeground2: var(--accent-primary) !important;
+  --colorBrandStroke1: var(--accent-primary) !important;
+  --colorCompoundBrandBackground: var(--accent-primary) !important;
+  --colorCompoundBrandForeground1: var(--accent-primary) !important;
+  --colorNeutralForegroundOnBrand: var(--accent-foreground) !important;
+  --colorStrokeFocus1: var(--surface-canvas) !important;
+  --colorStrokeFocus2: var(--focus-ring) !important;
+  --fontFamilyBase: "Segoe UI", system-ui, sans-serif !important;
+}

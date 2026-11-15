@@ -1,0 +1,14 @@
+@page "/dashboards"
+@inject IStringLocalizer<DashboardResources> Text
+@inject IStringLocalizer<ShellResources> Shell
+<PageTitle>@Shell["Dashboards"] · @Shell["Product"]</PageTitle>
+<DemoGate>
+    <section class="page-heading"><div><p class="eyebrow">@Text["Kicker"]</p><h1>@Text["Title"]</h1><p class="page-subtitle">@Text["Subtitle"]</p></div></section>
+    <section class="dashboard-heading"><div><h2>@Text["TitleExample"]</h2><p>@Text["DescriptionExample"]</p></div><div class="dashboard-badges"><span class="neutral-badge"><Icon Name="lock" />@Text["Private"]</span><span>@Text["WidgetCount"]</span></div></section>
+    <div class="dashboard-grid">
+        <section class="panel dashboard-chart"><div class="panel-heading"><div><h2>@Text["DashboardSource"]</h2><p>@Text["Preview"]</p></div><span class="unit-label">°C</span></div><DemoChart @rendermode="InteractiveServer" /></section>
+        <section class="panel pressure-widget"><p class="eyebrow">@Text["LastValueTitle"]</p><div class="pressure-value">@(4.2.ToString("N1"))<small>bar</small></div><p>@Text["SourceLabel"]</p><div class="mini-bars" aria-hidden="true">@foreach (var value in Enumerable.Range(0, 28)) { <span class="bar-@(value % 7)"></span> }</div></section>
+        <section class="panel note-widget"><p class="eyebrow">@Text["NoteLabel"]</p><h2>@Text["NoteTitle"]</h2><p>@Text["NoteBody"]</p></section>
+    </div>
+    <p class="preview-note"><Icon Name="info" />@Text["PreviewNote"]</p>
+</DemoGate>

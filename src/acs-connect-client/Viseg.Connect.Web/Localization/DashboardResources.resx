@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <data name="Kicker" xml:space="preserve"><value>DASHBOARDS</value></data>
+  <data name="Title" xml:space="preserve"><value>A space for the whole picture.</value></data>
+  <data name="Subtitle" xml:space="preserve"><value>Bring plots, tables and notes together across your authorized sources.</value></data>
+  <data name="Preview" xml:space="preserve"><value>Example dashboard</value></data>
+  <data name="Private" xml:space="preserve"><value>Private</value></data>
+  <data name="WidgetCount" xml:space="preserve"><value>3 of 20 widgets</value></data>
+  <data name="TitleExample" xml:space="preserve"><value>Production overview</value></data>
+  <data name="DescriptionExample" xml:space="preserve"><value>A mixed-source layout, ready for a closer look.</value></data>
+  <data name="NoteTitle" xml:space="preserve"><value>Shift notes</value></data>
+  <data name="NoteBody" xml:space="preserve"><value>Morning checks complete. Watch the temperature rise around midday and compare it with the return signal.</value></data>
+  <data name="NoteLabel" xml:space="preserve"><value>TEXT WIDGET</value></data>
+  <data name="PreviewNote" xml:space="preserve"><value>Layout preview · editing and saving arrive with dashboard delivery</value></data>
+  <data name="LastValueTitle" xml:space="preserve"><value>Pressure at a glance</value></data>
+  <data name="SourceLabel" xml:space="preserve"><value>North plant / pressure</value></data>
+  <data name="DashboardSource" xml:space="preserve"><value>West plant / temperature</value></data>
+</root>

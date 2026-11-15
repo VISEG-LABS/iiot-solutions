@@ -1,0 +1,8 @@
+@inject IOptions<DemoOptions> Demo
+@inject IStringLocalizer<ShellResources> Text
+@if (Demo.Value.UseSyntheticData) { @ChildContent }
+else
+{
+    <section class="empty-state"><Icon Name="lock" /><h1>@Text["DemoOffTitle"]</h1><p>@Text["DemoOffBody"]</p></section>
+}
+@code { [Parameter] public RenderFragment? ChildContent { get; set; } }

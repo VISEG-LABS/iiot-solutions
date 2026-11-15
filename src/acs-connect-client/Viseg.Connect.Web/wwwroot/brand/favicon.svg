@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+  <defs>
+    <linearGradient id="limeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BEF264"/><stop offset="50%" stop-color="#84CC16"/><stop offset="100%" stop-color="#4D7C0F"/>
+    </linearGradient>
+  </defs>
+  <rect width="140" height="140" rx="28" fill="#0B1120"/>
+  <g transform="translate(15,11)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 55 5 L 100 25 L 100 65 C 100 90 55 112 55 112 C 55 112 10 90 10 65 L 10 25 Z" stroke="url(#limeGrad)" stroke-width="7"/>
+    <path d="M 30 36 L 55 88 L 80 36" stroke="#84CC16" stroke-width="7"/>
+  </g>
+</svg>

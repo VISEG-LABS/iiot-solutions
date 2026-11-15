@@ -1,0 +1,38 @@
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+@inject IStringLocalizer<ObserveResources> Text
+<div class="chart-toolbar"><div class="chart-legend"><span><i class="legend-dot primary"></i>@Text["SeriesPrimary"]</span><span><i class="legend-dot secondary"></i>@Text["SeriesSecondary"]</span></div><div class="range-control" aria-label="@Text["Time"]"><button type="button" class="@(days == 1 ? "selected" : null)" aria-pressed="@(days == 1)" @onclick="() => ChangeRangeAsync(1)">@Text["Range24"]</button><button type="button" class="@(days == 7 ? "selected" : null)" aria-pressed="@(days == 7)" @onclick="() => ChangeRangeAsync(7)">@Text["Range7"]</button></div></div>
+<div class="chart-surface" @ref="element" role="img" aria-label="@Text["ChartDescription"]" data-testid="demo-chart"><span class="chart-loading">@Text[failed ? "ChartUnavailable" : "ChartLoading"]</span></div>
+<details class="chart-data"><summary>@Text["TableAlternative"]</summary><table><thead><tr><th>@Text["Time"]</th><th>@Text["SeriesPrimary"] (°C)</th><th>@Text["SeriesSecondary"] (°C)</th></tr></thead><tbody @ref="tableBody"><tr><td>2026-11-14 12:00 UTC</td><td>@(62.7.ToString("N1"))</td><td>@(58.8.ToString("N1"))</td></tr></tbody></table></details>
+@code {
+    private ElementReference element;
+    private ElementReference tableBody;
+    private IJSObjectReference? module;
+    private IJSObjectReference? chart;
+    private int days = 1;
+    private bool failed;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+        try
+        {
+            module = await JS.InvokeAsync<IJSObjectReference>("import", "./" + Assets["js/demo-chart.js"]);
+            chart = await module.InvokeAsync<IJSObjectReference>("mount", element, tableBody, CultureInfo.CurrentCulture.Name, days);
+        }
+        catch (JSException) { failed = true; StateHasChanged(); }
+    }
+    private async Task ChangeRangeAsync(int value)
+    {
+        days = value;
+        if (chart is not null) await chart.InvokeVoidAsync("setRange", days);
+    }
+    public async ValueTask DisposeAsync()
+    {
+        try
+        {
+            if (chart is not null) { await chart.InvokeVoidAsync("dispose"); await chart.DisposeAsync(); }
+            if (module is not null) await module.DisposeAsync();
+        }
+        catch (JSDisconnectedException) { }
+    }
+}

@@ -1,0 +1,24 @@
+@inject IHttpContextAccessor HttpContextAccessor
+@inject IStringLocalizer<ShellResources> Text
+<!DOCTYPE html>
+<html lang="@CultureInfo.CurrentUICulture.Name" data-theme="@Theme">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="@Text["Description"]" />
+    <base href="/" />
+    <link rel="icon" type="image/svg+xml" href="@Assets["brand/favicon.svg"]" />
+    <link rel="stylesheet" href="@Assets["_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.bundle.scp.css"]" />
+    <link rel="stylesheet" href="@Assets["css/tokens/primitives.css"]" />
+    <link rel="stylesheet" href="@Assets["css/tokens/themes.css"]" />
+    <link rel="stylesheet" href="@Assets["css/fluent-map.css"]" />
+    <link rel="stylesheet" href="@Assets["css/app.css"]" />
+    <script src="@Assets["js/theme-init.js"]"></script>
+    <HeadOutlet />
+</head>
+<body data-theme="@Theme" data-viseg-theme="@Theme">
+    <Routes />
+    <script src="@Assets["_framework/blazor.web.js"]"></script>
+</body>
+</html>
+@code { private string Theme => DisplayPreferences.ReadTheme(HttpContextAccessor.HttpContext); }

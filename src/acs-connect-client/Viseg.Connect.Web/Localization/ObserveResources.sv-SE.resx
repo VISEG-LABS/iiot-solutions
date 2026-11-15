@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <data name="Kicker" xml:space="preserve"><value>ÖVERVAKA</value></data>
+  <data name="Title" xml:space="preserve"><value>Din drift, i överblick.</value></data>
+  <data name="Subtitle" xml:space="preserve"><value>Utforska dina data. Upptäck förändringar. Behåll överblicken.</value></data>
+  <data name="OpenExplorer" xml:space="preserve"><value>Utforska strömmar</value></data>
+  <data name="TotalStreams" xml:space="preserve"><value>Strömmar</value></data>
+  <data name="AcrossSources" xml:space="preserve"><value>I 2 exempel-namnområden</value></data>
+  <data name="Active" xml:space="preserve"><value>Aktiva</value></data>
+  <data name="ActiveNote" xml:space="preserve"><value>Aktuella värden i exempeldatan</value></data>
+  <data name="Stale" xml:space="preserve"><value>Inaktuella</value></data>
+  <data name="StaleNote" xml:space="preserve"><value>Värda en närmare titt</value></data>
+  <data name="Namespaces" xml:space="preserve"><value>Namnområden</value></data>
+  <data name="Regions" xml:space="preserve"><value>Västra USA · Norra Europa</value></data>
+  <data name="TrendKicker" xml:space="preserve"><value>PROCESSTRENDER</value></data>
+  <data name="TrendTitle" xml:space="preserve"><value>Pulsen på produktionen</value></data>
+  <data name="TrendSubtitle" xml:space="preserve"><value>Syntetiska process- och returtemperaturer</value></data>
+  <data name="Temperature" xml:space="preserve"><value>Temperatur</value></data>
+  <data name="Pressure" xml:space="preserve"><value>Tryck</value></data>
+  <data name="SeriesPrimary" xml:space="preserve"><value>Processtemperatur</value></data>
+  <data name="SeriesSecondary" xml:space="preserve"><value>Returtemperatur</value></data>
+  <data name="ChartDescription" xml:space="preserve"><value>Exempel på temperatursignaler över tid. En datatabell finns nedan.</value></data>
+  <data name="Range24" xml:space="preserve"><value>24 timmar</value></data>
+  <data name="Range7" xml:space="preserve"><value>7 dagar</value></data>
+  <data name="TableAlternative" xml:space="preserve"><value>Visa exempelvärden</value></data>
+  <data name="Time" xml:space="preserve"><value>Tid</value></data>
+  <data name="Value" xml:space="preserve"><value>Värde</value></data>
+  <data name="SourcesTitle" xml:space="preserve"><value>Sammanlänkade perspektiv</value></data>
+  <data name="SourcesSubtitle" xml:space="preserve"><value>Två regioner. En arbetsyta.</value></data>
+  <data name="PlantWest" xml:space="preserve"><value>Anläggning väst</value></data>
+  <data name="PlantNorth" xml:space="preserve"><value>Anläggning nord</value></data>
+  <data name="Operational" xml:space="preserve"><value>I drift</value></data>
+  <data name="ViewStreams" xml:space="preserve"><value>Visa strömmar</value></data>
+  <data name="AttentionTitle" xml:space="preserve"><value>Lite uppmärksamhet gör stor skillnad.</value></data>
+  <data name="AttentionBody" xml:space="preserve"><value>32 exempelströmmar har äldre värden. Hälsoöversikten hjälper dig att undersöka dem utan att läsa alla strömmar.</value></data>
+  <data name="ExplorerTitle" xml:space="preserve"><value>Hitta nästa insikt.</value></data>
+  <data name="ExplorerSubtitle" xml:space="preserve"><value>Bläddra i en syntetisk strömkatalog och prova sök- och rutnätsfunktionerna.</value></data>
+  <data name="Search" xml:space="preserve"><value>Sök strömmar</value></data>
+  <data name="SearchPlaceholder" xml:space="preserve"><value>Sök efter ström-ID…</value></data>
+  <data name="StreamId" xml:space="preserve"><value>Ström-ID</value></data>
+  <data name="Type" xml:space="preserve"><value>Typ</value></data>
+  <data name="Namespace" xml:space="preserve"><value>Namnområde</value></data>
+  <data name="LastValue" xml:space="preserve"><value>Senaste värde</value></data>
+  <data name="Status" xml:space="preserve"><value>Status</value></data>
+  <data name="Results" xml:space="preserve"><value>{0:N0} exempelströmmar</value></data>
+  <data name="NoResults" xml:space="preserve"><value>Inga matchande strömmar</value></data>
+  <data name="NoResultsBody" xml:space="preserve"><value>Prova ett annat ström-ID eller rensa sökningen.</value></data>
+  <data name="ClearSearch" xml:space="preserve"><value>Rensa sökningen</value></data>
+  <data name="ChartLoading" xml:space="preserve"><value>Laddar exempeldiagram</value></data>
+  <data name="ChartUnavailable" xml:space="preserve"><value>Diagrammet kunde inte laddas. Exempelvärdena finns kvar nedan.</value></data>
+</root>

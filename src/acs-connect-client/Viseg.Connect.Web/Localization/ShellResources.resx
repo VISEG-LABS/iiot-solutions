@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <data name="Product" xml:space="preserve"><value>CONNECT</value></data>
+  <data name="Description" xml:space="preserve"><value>A VISEG LABS workspace for industrial data.</value></data>
+  <data name="Workspace" xml:space="preserve"><value>Industrial workspace</value></data>
+  <data name="Navigation" xml:space="preserve"><value>Workspace navigation</value></data>
+  <data name="Skip" xml:space="preserve"><value>Skip to content</value></data>
+  <data name="Overview" xml:space="preserve"><value>Overview</value></data>
+  <data name="Explorer" xml:space="preserve"><value>Explorer</value></data>
+  <data name="Dashboards" xml:space="preserve"><value>Dashboards</value></data>
+  <data name="WorkspaceLabel" xml:space="preserve"><value>WORKSPACE</value></data>
+  <data name="Demo" xml:space="preserve"><value>Demo workspace</value></data>
+  <data name="DemoNotice" xml:space="preserve"><value>Example data · no CONNECT requests</value></data>
+  <data name="ThemeLight" xml:space="preserve"><value>Switch to light theme</value></data>
+  <data name="ThemeDark" xml:space="preserve"><value>Switch to dark theme</value></data>
+  <data name="Language" xml:space="preserve"><value>Byt till svenska</value></data>
+  <data name="Account" xml:space="preserve"><value>Workspace information</value></data>
+  <data name="Close" xml:space="preserve"><value>Close</value></data>
+  <data name="AboutTitle" xml:space="preserve"><value>About this workspace</value></data>
+  <data name="AboutBody" xml:space="preserve"><value>This preview uses synthetic data. Live connections, sign-in, access management and saved dashboards will be enabled in the next delivery stages.</value></data>
+  <data name="LocalPreview" xml:space="preserve"><value>Local preview</value></data>
+  <data name="ExampleSources" xml:space="preserve"><value>Example sources</value></data>
+  <data name="DemoOffTitle" xml:space="preserve"><value>Live access is not configured</value></data>
+  <data name="DemoOffBody" xml:space="preserve"><value>Synthetic previews are disabled. Configure sign-in and authorized connections before using live data.</value></data>
+  <data name="Copyright" xml:space="preserve"><value>VISEG LABS AB</value></data>
+  <data name="NotFound" xml:space="preserve"><value>Page not found</value></data>
+  <data name="NotFoundBody" xml:space="preserve"><value>The requested page could not be found.</value></data>
+  <data name="BackHome" xml:space="preserve"><value>Back to overview</value></data>
+</root>

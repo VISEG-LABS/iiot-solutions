@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <UserSecretsId>viseg-connect-client</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Viseg.Connect.Core/Viseg.Connect.Core.csproj" />
+    <ProjectReference Include="../Viseg.Connect.Cds/Viseg.Connect.Cds.csproj" />
+    <ProjectReference Include="../Viseg.Connect.Data/Viseg.Connect.Data.csproj" />
+    <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" />
+  </ItemGroup>
+</Project>

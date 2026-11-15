@@ -1,0 +1,18 @@
+@page "/"
+@inject IStringLocalizer<ObserveResources> Text
+@inject IStringLocalizer<ShellResources> Shell
+<PageTitle>@Text["Title"] · @Shell["Product"]</PageTitle>
+<DemoGate>
+    <section class="page-heading"><div><p class="eyebrow">@Text["Kicker"]</p><h1>@Text["Title"]</h1><p class="page-subtitle">@Text["Subtitle"]</p></div><a class="button button-primary" href="/explorer">@Text["OpenExplorer"]<Icon Name="arrow" /></a></section>
+    <div class="stat-grid">
+        <article class="stat-card"><div class="stat-top"><span>@Text["TotalStreams"]</span><Icon Name="pulse" /></div><strong class="stat-number">@(2000.ToString("N0"))</strong><small>@Text["AcrossSources"]</small></article>
+        <article class="stat-card"><div class="stat-top"><span>@Text["Active"]</span><span class="stat-icon lime"><Icon Name="check" /></span></div><strong class="stat-number">@(1968.ToString("N0"))<span class="stat-fraction">/ @(2000.ToString("N0"))</span></strong><small>@Text["ActiveNote"]</small></article>
+        <article class="stat-card"><div class="stat-top"><span>@Text["Stale"]</span><span class="stat-icon orange"><Icon Name="clock" /></span></div><strong class="stat-number">@(32.ToString("N0"))</strong><small>@Text["StaleNote"]</small></article>
+        <article class="stat-card"><div class="stat-top"><span>@Text["Namespaces"]</span><Icon Name="globe" /></div><strong class="stat-number">02</strong><small>@Text["Regions"]</small></article>
+    </div>
+    <section class="panel trend-panel"><div class="panel-heading"><div><p class="eyebrow">@Text["TrendKicker"]</p><h2>@Text["TrendTitle"]</h2><p>@Text["TrendSubtitle"]</p></div><span class="unit-label">°C</span></div><DemoChart @rendermode="InteractiveServer" /></section>
+    <div class="bottom-grid">
+        <section class="panel sources-panel"><div class="panel-heading"><div><h2>@Text["SourcesTitle"]</h2><p>@Text["SourcesSubtitle"]</p></div><span class="count-badge">02</span></div><DemoSources /></section>
+        <section class="attention-card"><span class="attention-icon"><Icon Name="clock" /></span><h2>@Text["AttentionTitle"]</h2><p>@Text["AttentionBody"]</p><a class="text-link" href="/explorer">@Text["ViewStreams"]<Icon Name="arrow" /></a></section>
+    </div>
+</DemoGate>

@@ -1,0 +1,51 @@
+name: CONNECT client CI
+on:
+  push:
+    paths: ['src/acs-connect-client/**', '.github/workflows/acs-connect-client-ci.yml']
+  pull_request:
+    paths: ['src/acs-connect-client/**', '.github/workflows/acs-connect-client-ci.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: src/acs-connect-client
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-dotnet@v6.1.0
+        with:
+          global-json-file: src/acs-connect-client/global.json
+          cache: true
+          cache-dependency-path: src/acs-connect-client/**/packages.lock.json
+      - name: Restore pinned dependencies
+        run: dotnet restore Viseg.Connect.slnx --locked-mode
+      - name: Build
+        run: dotnet build Viseg.Connect.slnx --configuration Release --no-restore
+      - name: Verify source boundaries and design tokens
+        run: ./build/Verify-Source.ps1
+      - name: Check dependency policy and advisories
+        run: ./build/Verify-Dependencies.ps1
+      - name: Install browser
+        run: ./tests/Viseg.Connect.E2E/bin/Release/net10.0/playwright.ps1 install --with-deps chromium
+      - name: Unit and browser checks
+        env:
+          VISEG_TEST_OUTPUT: ${{ github.workspace }}/src/acs-connect-client/artifacts/screenshots
+        run: dotnet test Viseg.Connect.slnx --configuration Release --no-build --logger trx --results-directory artifacts/test-results
+      - name: Install Bicep compiler
+        run: az bicep install --version v0.49.2
+      - name: Validate infrastructure source
+        run: ./build/Validate-Infrastructure.ps1
+      - name: Package Linux application
+        run: dotnet publish Viseg.Connect.Web --configuration Release --runtime linux-x64 --self-contained false -p:RestoreLockedMode=true --output artifacts/publish
+      - name: Upload verification and application artifacts
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: connect-client-verification
+          path: src/acs-connect-client/artifacts
+          if-no-files-found: ignore
+          retention-days: 7

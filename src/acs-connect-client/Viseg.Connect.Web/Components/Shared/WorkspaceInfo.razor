@@ -1,0 +1,14 @@
+@inject IStringLocalizer<ShellResources> Text
+<button class="icon-button account-button" type="button" aria-label="@Text["Account"]" @onclick="OpenAsync"><Icon Name="info" /></button>
+<FluentDialog @ref="dialog" aria-label="@Text["AboutTitle"]">
+    <FluentDialogBody>
+        <TitleTemplate>@Text["AboutTitle"]</TitleTemplate>
+        <ChildContent><p class="dialog-copy">@Text["AboutBody"]</p></ChildContent>
+        <ActionTemplate><button class="button button-primary" type="button" @onclick="CloseAsync">@Text["Close"]</button></ActionTemplate>
+    </FluentDialogBody>
+</FluentDialog>
+@code {
+    private FluentDialog? dialog;
+    private Task OpenAsync() => dialog!.ShowAsync();
+    private Task CloseAsync() => dialog!.HideAsync();
+}

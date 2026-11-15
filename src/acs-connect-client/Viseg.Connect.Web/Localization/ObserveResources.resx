@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <data name="Kicker" xml:space="preserve"><value>OBSERVE</value></data>
+  <data name="Title" xml:space="preserve"><value>Your operations, in view.</value></data>
+  <data name="Subtitle" xml:space="preserve"><value>Explore your data. Spot changes. Keep the bigger picture.</value></data>
+  <data name="OpenExplorer" xml:space="preserve"><value>Explore streams</value></data>
+  <data name="TotalStreams" xml:space="preserve"><value>Streams</value></data>
+  <data name="AcrossSources" xml:space="preserve"><value>Across 2 example namespaces</value></data>
+  <data name="Active" xml:space="preserve"><value>Active</value></data>
+  <data name="ActiveNote" xml:space="preserve"><value>Recent values in the example dataset</value></data>
+  <data name="Stale" xml:space="preserve"><value>Stale</value></data>
+  <data name="StaleNote" xml:space="preserve"><value>Worth a closer look</value></data>
+  <data name="Namespaces" xml:space="preserve"><value>Namespaces</value></data>
+  <data name="Regions" xml:space="preserve"><value>West US · North Europe</value></data>
+  <data name="TrendKicker" xml:space="preserve"><value>PROCESS TRENDS</value></data>
+  <data name="TrendTitle" xml:space="preserve"><value>A pulse on production</value></data>
+  <data name="TrendSubtitle" xml:space="preserve"><value>Synthetic process and return temperatures</value></data>
+  <data name="Temperature" xml:space="preserve"><value>Temperature</value></data>
+  <data name="Pressure" xml:space="preserve"><value>Pressure</value></data>
+  <data name="SeriesPrimary" xml:space="preserve"><value>Process temperature</value></data>
+  <data name="SeriesSecondary" xml:space="preserve"><value>Return temperature</value></data>
+  <data name="ChartDescription" xml:space="preserve"><value>Example temperature signals over time. A data table is available below.</value></data>
+  <data name="Range24" xml:space="preserve"><value>24 hours</value></data>
+  <data name="Range7" xml:space="preserve"><value>7 days</value></data>
+  <data name="TableAlternative" xml:space="preserve"><value>View example values</value></data>
+  <data name="Time" xml:space="preserve"><value>Time</value></data>
+  <data name="Value" xml:space="preserve"><value>Value</value></data>
+  <data name="SourcesTitle" xml:space="preserve"><value>Connected perspectives</value></data>
+  <data name="SourcesSubtitle" xml:space="preserve"><value>Two regions. One workspace.</value></data>
+  <data name="PlantWest" xml:space="preserve"><value>West plant</value></data>
+  <data name="PlantNorth" xml:space="preserve"><value>North plant</value></data>
+  <data name="Operational" xml:space="preserve"><value>Operational</value></data>
+  <data name="ViewStreams" xml:space="preserve"><value>View streams</value></data>
+  <data name="AttentionTitle" xml:space="preserve"><value>A little attention goes a long way.</value></data>
+  <data name="AttentionBody" xml:space="preserve"><value>32 example streams have older values. The health overview will help you investigate without scanning every stream.</value></data>
+  <data name="ExplorerTitle" xml:space="preserve"><value>Find your next insight.</value></data>
+  <data name="ExplorerSubtitle" xml:space="preserve"><value>Browse a synthetic stream catalog and try the search and grid controls.</value></data>
+  <data name="Search" xml:space="preserve"><value>Search streams</value></data>
+  <data name="SearchPlaceholder" xml:space="preserve"><value>Search by stream ID…</value></data>
+  <data name="StreamId" xml:space="preserve"><value>Stream ID</value></data>
+  <data name="Type" xml:space="preserve"><value>Type</value></data>
+  <data name="Namespace" xml:space="preserve"><value>Namespace</value></data>
+  <data name="LastValue" xml:space="preserve"><value>Last value</value></data>
+  <data name="Status" xml:space="preserve"><value>Status</value></data>
+  <data name="Results" xml:space="preserve"><value>{0:N0} example streams</value></data>
+  <data name="NoResults" xml:space="preserve"><value>No matching streams</value></data>
+  <data name="NoResultsBody" xml:space="preserve"><value>Try another stream ID or clear your search.</value></data>
+  <data name="ClearSearch" xml:space="preserve"><value>Clear search</value></data>
+  <data name="ChartLoading" xml:space="preserve"><value>Loading example chart</value></data>
+  <data name="ChartUnavailable" xml:space="preserve"><value>The chart could not be loaded. The example values remain available below.</value></data>
+</root>

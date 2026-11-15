@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <data name="Product" xml:space="preserve"><value>CONNECT</value></data>
+  <data name="Description" xml:space="preserve"><value>En VISEG LABS-arbetsyta för industridata.</value></data>
+  <data name="Workspace" xml:space="preserve"><value>Arbetsyta för industridata</value></data>
+  <data name="Navigation" xml:space="preserve"><value>Navigering i arbetsytan</value></data>
+  <data name="Skip" xml:space="preserve"><value>Hoppa till innehåll</value></data>
+  <data name="Overview" xml:space="preserve"><value>Översikt</value></data>
+  <data name="Explorer" xml:space="preserve"><value>Utforskare</value></data>
+  <data name="Dashboards" xml:space="preserve"><value>Instrumentpaneler</value></data>
+  <data name="WorkspaceLabel" xml:space="preserve"><value>ARBETSYTA</value></data>
+  <data name="Demo" xml:space="preserve"><value>Demoarbetsyta</value></data>
+  <data name="DemoNotice" xml:space="preserve"><value>Exempeldata · inga CONNECT-anrop</value></data>
+  <data name="ThemeLight" xml:space="preserve"><value>Byt till ljust tema</value></data>
+  <data name="ThemeDark" xml:space="preserve"><value>Byt till mörkt tema</value></data>
+  <data name="Language" xml:space="preserve"><value>Switch to English</value></data>
+  <data name="Account" xml:space="preserve"><value>Information om arbetsytan</value></data>
+  <data name="Close" xml:space="preserve"><value>Stäng</value></data>
+  <data name="AboutTitle" xml:space="preserve"><value>Om arbetsytan</value></data>
+  <data name="AboutBody" xml:space="preserve"><value>Den här förhandsvisningen använder syntetiska data. Liveanslutningar, inloggning, behörigheter och sparade instrumentpaneler införs i kommande leveranssteg.</value></data>
+  <data name="LocalPreview" xml:space="preserve"><value>Lokal förhandsvisning</value></data>
+  <data name="ExampleSources" xml:space="preserve"><value>Exempelkällor</value></data>
+  <data name="DemoOffTitle" xml:space="preserve"><value>Liveåtkomst är inte konfigurerad</value></data>
+  <data name="DemoOffBody" xml:space="preserve"><value>Syntetiska förhandsvisningar är avstängda. Konfigurera inloggning och behöriga anslutningar innan livedata används.</value></data>
+  <data name="Copyright" xml:space="preserve"><value>VISEG LABS AB</value></data>
+  <data name="NotFound" xml:space="preserve"><value>Sidan hittades inte</value></data>
+  <data name="NotFoundBody" xml:space="preserve"><value>Den begärda sidan kunde inte hittas.</value></data>
+  <data name="BackHome" xml:space="preserve"><value>Tillbaka till översikten</value></data>
+</root>

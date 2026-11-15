@@ -1,0 +1,15 @@
+{
+  "transitiveExceptions": {
+    "Polly.Core": "8.4.2",
+    "Polly.Extensions": "8.4.2",
+    "Polly.RateLimiting": "8.4.2",
+    "OpenTelemetry": "1.15.3",
+    "OpenTelemetry.Api": "1.15.3",
+    "OpenTelemetry.Api.ProviderBuilderExtensions": "1.15.3",
+    "OpenTelemetry.Extensions.Hosting": "1.15.3",
+    "OpenTelemetry.Instrumentation.AspNetCore": "1.15.2",
+    "OpenTelemetry.Instrumentation.Http": "1.15.1",
+    "OpenTelemetry.PersistentStorage.Abstractions": "1.0.3",
+    "OpenTelemetry.PersistentStorage.FileSystem": "1.0.3"
+  }
+}

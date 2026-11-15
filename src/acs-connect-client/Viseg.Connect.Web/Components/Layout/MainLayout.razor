@@ -1,0 +1,51 @@
+@inherits LayoutComponentBase
+@inject IStringLocalizer<ShellResources> Text
+@inject IHttpContextAccessor Context
+@inject NavigationManager Navigation
+@inject IOptions<DemoOptions> Demo
+<a class="skip-link" href="#main-content" data-enhance-nav="false">@Text["Skip"]</a>
+<div class="app-shell">
+    <aside class="sidebar">
+        <a class="brand" href="/" aria-label="@Text["Product"]">
+            <img class="logo-dark" src="brand/logo-dark.svg" alt="@Text["Copyright"]" width="184" height="57" />
+            <img class="logo-light" src="brand/logo-light.svg" alt="@Text["Copyright"]" width="184" height="57" />
+        </a>
+        <div class="product-label"><span class="brand-square"></span>@Text["Product"]<span class="product-version">01</span></div>
+        <p class="navigation-caption">@Text["WorkspaceLabel"]</p>
+        <nav class="primary-nav" aria-label="@Text["Navigation"]">
+            <NavLink href="/" Match="NavLinkMatch.All"><Icon /><span>@Text["Overview"]</span></NavLink>
+            <NavLink href="/explorer"><Icon Name="explorer" /><span>@Text["Explorer"]</span></NavLink>
+            <NavLink href="/dashboards"><Icon Name="dashboard" /><span>@Text["Dashboards"]</span></NavLink>
+        </nav>
+        <div class="sidebar-footer"><span class="status-dot"></span><span>@Text["LocalPreview"]</span><small>@Text["Copyright"]</small></div>
+    </aside>
+    <div class="workspace">
+        <header class="topbar">
+            <div class="workspace-name"><Icon Name="globe" /><span>@Text["Workspace"]</span></div>
+            <div class="topbar-actions">
+                @if (Demo.Value.UseSyntheticData) { <span class="demo-badge"><span></span>@Text["Demo"]</span> }
+                <form method="post" action="/preferences" data-enhance="false">
+                    <AntiforgeryToken />
+                    <input type="hidden" name="theme" value="@(Theme == "dark" ? "light" : "dark")" />
+                    <input type="hidden" name="culture" value="@CultureInfo.CurrentUICulture.Name" />
+                    <input type="hidden" name="returnUrl" value="@ReturnPath" />
+                    <button class="icon-button" type="submit" aria-label="@Text[Theme == "dark" ? "ThemeLight" : "ThemeDark"]" title="@Text[Theme == "dark" ? "ThemeLight" : "ThemeDark"]"><Icon Name="@(Theme == "dark" ? "sun" : "moon")" /></button>
+                </form>
+                <form method="post" action="/preferences" data-enhance="false">
+                    <AntiforgeryToken />
+                    <input type="hidden" name="theme" value="@Theme" />
+                    <input type="hidden" name="culture" value="@(CultureInfo.CurrentUICulture.Name == "sv-SE" ? "en-US" : "sv-SE")" />
+                    <input type="hidden" name="returnUrl" value="@ReturnPath" />
+                    <button class="language-button" type="submit" aria-label="@Text["Language"]">@(CultureInfo.CurrentUICulture.Name == "sv-SE" ? "SV" : "EN")</button>
+                </form>
+                <WorkspaceInfo @rendermode="InteractiveServer" />
+            </div>
+        </header>
+        <main id="main-content" tabindex="-1">@Body</main>
+        <footer class="workspace-footer"><span>@Text["Product"] <span class="footer-slash">/</span> @Text["Copyright"]</span>@if (Demo.Value.UseSyntheticData) { <span>@Text["DemoNotice"]</span> }</footer>
+    </div>
+</div>
+@code {
+    private string Theme => DisplayPreferences.ReadTheme(Context.HttpContext);
+    private string ReturnPath => "/" + Navigation.ToBaseRelativePath(Navigation.Uri);
+}

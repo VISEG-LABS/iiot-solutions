@@ -1,0 +1,8 @@
+@page "/explorer"
+@inject IStringLocalizer<ObserveResources> Text
+@inject IStringLocalizer<ShellResources> Shell
+<PageTitle>@Shell["Explorer"] · @Shell["Product"]</PageTitle>
+<DemoGate>
+    <section class="page-heading"><div><p class="eyebrow">@Shell["Explorer"]</p><h1>@Text["ExplorerTitle"]</h1><p class="page-subtitle">@Text["ExplorerSubtitle"]</p></div></section>
+    <section class="panel explorer-panel"><DemoStreamGrid @rendermode="InteractiveServer" /></section>
+</DemoGate>

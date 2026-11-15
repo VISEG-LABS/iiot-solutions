@@ -1,0 +1,50 @@
+:root, [data-theme="dark"] {
+  color-scheme: dark;
+  --surface-canvas: var(--p-black);
+  --surface-sidebar: var(--p-ink-950);
+  --surface-panel: var(--p-ink-900);
+  --surface-hover: var(--p-ink-850);
+  --surface-field: var(--p-ink-950);
+  --text-primary: var(--p-grey-100);
+  --text-secondary: var(--p-grey-500);
+  --border-default: var(--p-ink-800);
+  --accent-primary: var(--p-lime-300);
+  --accent-primary-hover: var(--p-lime-500);
+  --accent-foreground: var(--p-black);
+  --accent-secondary: var(--p-orange-400);
+  --accent-subtle: var(--p-lime-wash);
+  --attention-subtle: var(--p-orange-wash);
+  --focus-ring: var(--p-lime-300);
+  --chart-series-1: var(--p-lime-300);
+  --chart-series-2: var(--p-orange-400);
+  --chart-grid: var(--p-ink-800);
+}
+[data-theme="light"] {
+  color-scheme: light;
+  --surface-canvas: var(--p-white);
+  --surface-sidebar: var(--p-paper);
+  --surface-panel: var(--p-white);
+  --surface-hover: var(--p-paper);
+  --surface-field: var(--p-paper);
+  --text-primary: var(--p-ink-900);
+  --text-secondary: var(--p-text-muted);
+  --border-default: var(--p-border);
+  --accent-primary: var(--p-lime-700);
+  --accent-primary-hover: var(--p-lime-900);
+  --accent-foreground: var(--p-white);
+  --accent-secondary: var(--p-orange-700);
+  --accent-subtle: var(--p-lime-paper);
+  --attention-subtle: var(--p-orange-paper);
+  --focus-ring: var(--p-lime-700);
+  --chart-series-1: var(--p-lime-700);
+  --chart-series-2: var(--p-orange-700);
+  --chart-grid: var(--p-border);
+}
+:root {
+  --nav-active-surface: var(--accent-subtle);
+  --nav-active-text: var(--accent-primary);
+  --button-primary-surface: var(--accent-primary);
+  --button-primary-text: var(--accent-foreground);
+  --card-radius: 12px;
+  --control-radius: 7px;
+}

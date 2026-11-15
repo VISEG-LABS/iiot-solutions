@@ -1,0 +1,32 @@
+@inject IStringLocalizer<ObserveResources> Text
+<div class="explorer-toolbar"><div class="search-field"><Icon Name="search" /><label class="sr-only" for="stream-search">@Text["Search"]</label><input id="stream-search" type="search" placeholder="@Text["SearchPlaceholder"]" @bind="search" @bind:event="oninput" /></div><span class="results-count" aria-live="polite">@Text["Results", MatchCount]</span></div>
+@if (MatchCount == 0)
+{
+    <div class="empty-state"><Icon Name="search" /><h2>@Text["NoResults"]</h2><p>@Text["NoResultsBody"]</p><button class="button button-secondary" type="button" @onclick="() => search = string.Empty">@Text["ClearSearch"]</button></div>
+}
+else
+{
+    <div class="stream-grid" @key="search">
+        <FluentDataGrid TGridItem="ExampleStream" ItemsProvider="ProvideRows" Virtualize="true" ItemSize="52" DisplayMode="DataGridDisplayMode.Table">
+            <PropertyColumn Property="@(row => row.Id)" Title="@Text["StreamId"]" />
+            <TemplateColumn Title="@Text["Namespace"]"><span class="table-namespace">@Text[context.West ? "PlantWest" : "PlantNorth"]</span></TemplateColumn>
+            <PropertyColumn Property="@(row => row.Type)" Title="@Text["Type"]" />
+            <TemplateColumn Title="@Text["LastValue"]"><span class="mono">@context.Value.ToString("N1") °C</span></TemplateColumn>
+            <TemplateColumn Title="@Text["Status"]"><span class="table-status @(context.Stale ? "orange" : "lime")"><span class="status-dot"></span>@Text[context.Stale ? "Stale" : "Active"]</span></TemplateColumn>
+        </FluentDataGrid>
+    </div>
+}
+@code {
+    private string search = string.Empty;
+    private IEnumerable<int> Matches => Enumerable.Range(0, 2000).Where(index => $"stream-{index:D4}".Contains(search, StringComparison.OrdinalIgnoreCase));
+    private int MatchCount => Matches.Count();
+    private ValueTask<GridItemsProviderResult<ExampleStream>> ProvideRows(GridItemsProviderRequest<ExampleStream> request)
+    {
+        request.CancellationToken.ThrowIfCancellationRequested();
+        var matches = Matches.ToArray();
+        var rows = matches.Skip(request.StartIndex).Take(request.Count ?? 20)
+            .Select(index => new ExampleStream($"stream-{index:D4}", index % 2 == 0, "TimeDouble", 60 + Math.Sin(index) * 8, index % 63 == 0)).ToArray();
+        return ValueTask.FromResult(GridItemsProviderResult.From(rows, matches.Length));
+    }
+    private sealed record ExampleStream(string Id, bool West, string Type, double Value, bool Stale);
+}

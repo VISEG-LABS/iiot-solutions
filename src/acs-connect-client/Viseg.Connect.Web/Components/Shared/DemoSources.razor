@@ -1,0 +1,11 @@
+@inject IStringLocalizer<ObserveResources> Text
+<div class="source-list">
+    @foreach (var west in new[] { true, false })
+    {
+        <a class="source-row" href="/explorer">
+            <span class="source-icon"><Icon Name="@(west ? "pulse" : "globe")" /></span>
+            <span class="source-detail"><strong>@Text[west ? "PlantWest" : "PlantNorth"]</strong><small>@(west ? "US-WEST / demo-west" : "EU-NORTH / demo-north")</small></span>
+            <span class="source-status"><span class="status-dot"></span>@Text["Operational"]</span><Icon Name="arrow" />
+        </a>
+    }
+</div>

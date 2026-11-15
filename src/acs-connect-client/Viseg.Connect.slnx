@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="Viseg.Connect.Core/Viseg.Connect.Core.csproj" />
+  <Project Path="Viseg.Connect.Cds/Viseg.Connect.Cds.csproj" />
+  <Project Path="Viseg.Connect.Data/Viseg.Connect.Data.csproj" />
+  <Project Path="Viseg.Connect.Web/Viseg.Connect.Web.csproj" />
+  <Folder Name="/Tests/">
+    <Project Path="tests/Viseg.Connect.Tests/Viseg.Connect.Tests.csproj" />
+    <Project Path="tests/Viseg.Connect.E2E/Viseg.Connect.E2E.csproj" />
+  </Folder>
+</Solution>
