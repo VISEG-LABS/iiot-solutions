@@ -3,6 +3,18 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Agentic
+context/
+xlocal/
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+claude-debug.log
+
+.codex/
+AGENTS.md
+AGENTS.override.md
+
 # User-specific files
 *.rsuser
 *.suo
